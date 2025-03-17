@@ -45,8 +45,8 @@ target_sources_ifdef(CONFIG_ZMK_EXT_POWER app PRIVATE src/behaviors/behavior_ext
 target_sources_ifdef(CONFIG_ZMK_BEHAVIOR_SOFT_OFF app PRIVATE src/behaviors/behavior_soft_off.c)
 add_subdirectory_ifdef(CONFIG_ZMK_POINTING src/pointing/)
 ##tera add
-target_sources(app PRIVATE src/keymap.c)
-target_sources(app PRIVATE src/events/layer_state_changed.c)
+#target_sources(app PRIVATE src/keymap.c)
+#target_sources(app PRIVATE src/events/layer_state_changed.c)
 ##tera end
 if ((NOT CONFIG_ZMK_SPLIT) OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
   target_sources(app PRIVATE src/hid.c)
